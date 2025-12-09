@@ -1,0 +1,619 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  /* font-weight: weight; */
+  font-style: normal;
+}
+.container{
+    min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+section{
+    scroll-margin: 50px;
+}
+.box{
+    width:100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+nav{
+    width:95%;
+    padding:10px;
+    border-radius: 10px;
+     background-image: linear-gradient(white,skyblue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 30px;
+  top: 15px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  z-index: 3;
+
+}
+nav h1{
+    width:60px;
+    height: 60px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sub-nav a{
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    color: cornflowerblue;
+
+}
+.sub-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+    transition: all 1s;
+
+}
+input {
+  display: none;
+}
+nav label {
+  display: none;
+}
+input:checked ~ .sub-nav {
+   
+  right: 0%;
+}
+
+
+.sub-nav button{
+    /* width:100px; */
+    padding:10px;
+    background-color: cornflowerblue;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-size: 18px;
+}
+.sub-nav button i{
+    color: white;
+    font-size: 18px;
+    display: none;
+}
+@media only screen and (min-width: 700px) and (max-width: 800px) {
+    .sub-nav button i{
+        display: block;
+    }
+    .sub-nav button p{
+        display: none;
+    }
+
+    
+}
+@media only screen and (min-width: 624px) and (max-width: 700px) {
+    .sub-nav button i{
+        display: block;
+    }
+    .sub-nav button p{
+        display: none;
+    }
+
+    
+}
+@media only screen and (min-width: 500px) and (max-width: 624px) {
+    nav .sub-nav {
+    position: fixed;
+    right: 110%;
+    top: 88px;
+    width: 100%;
+    height: 40vh;
+    flex-direction: column;
+    justify-content: start;
+    background-image: linear-gradient(white,lightgrey);
+    border-radius: 10px;
+  }
+
+  nav label {
+    display:block;
+
+}
+}
+@media only screen and (min-width: 400px) and (max-width: 500px) {
+    nav .sub-nav {
+    position: fixed;
+    right: 110%;
+    top: 88px;
+    width: 100%;
+    height: 40vh;
+    flex-direction: column;
+    justify-content: start;
+    background-image: linear-gradient(white,lightgrey);
+     border-radius: 10px;
+  }
+
+  nav label {
+    display:block;
+
+}
+}
+@media only screen and (min-width: 300px) and (max-width: 400px) {
+    nav .sub-nav {
+    position: fixed;
+    right: 110%;
+    top: 88px;
+    width: 100%;
+    height: 40vh;
+    flex-direction: column;
+    justify-content: start;
+    background-image: linear-gradient(white,lightgrey);
+     border-radius: 10px;
+  }
+
+  nav label {
+    display:block;
+
+}
+}
+.box1 {
+    width:100%;
+    min-height:100vh;
+    background-color: rgba(18, 105, 235, 0.9); 
+  background-blend-mode: multiply;
+
+}
+.overall-home-box{
+    width:80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-direction: row-reverse; */
+}
+.overall-home-box img{
+    width:30%;
+    height: 70vh;
+    object-fit: cover;
+}
+.home-content{
+    color:white;
+    display: inline-block;
+    font-size: 30px;
+}
+
+
+
+@media only screen and (min-width:1000px) and (max-width:1200px){
+    .overall-home-box img{
+        width:37%;
+        height: 460px;
+    }
+}
+@media only screen and (min-width:900px) and (max-width:1000px){
+    .overall-home-box img{
+        width:41%;
+   
+}
+}
+@media only screen and (min-width:800px) and (max-width:900px){
+    .overall-home-box img{
+        width:48%;  
+}
+}
+@media only screen and (min-width:700px) and (max-width:800px){
+    .overall-home-box img{
+        width:52%;
+    }
+}
+@media only screen and (min-width:600px) and (max-width:700px){
+    .overall-home-box img{
+        width:61%;
+    }
+}
+@media only screen and (min-width:500px) and (max-width:600px){
+    .overall-home-box img{
+        width:62%;
+        height: 54vh;
+    }
+    .home-content{
+        font-size: 24px;
+    }
+}
+    @media only screen and (min-width:400px) and (max-width:500px){
+      .overall-home-box img {
+        width: 100%;
+        height: 52vh;
+        transform: translate(99px, 130px);
+    }
+
+   .home-content {
+    font-size: 17px;
+    transform: translate(15px, -24px);
+    } 
+    .overall-home-box {
+        flex-direction: row-reverse;
+    }
+}
+@media only screen and (min-width:300px) and (max-width:400px){
+       .overall-home-box img {
+        width: 100%;
+        height: 52vh;
+        transform: translate(99px, 130px);
+    }
+
+   .home-content {
+    font-size: 17px;
+    transform: translate(15px, -24px);
+    } 
+    .btn1 button{
+        font-size: 16px;
+    }
+    .overall-home-box {
+        flex-direction: row-reverse;
+    }
+}
+.box2{
+    /* background-color: lightcoral; */
+    min-height: 100vh;
+}
+.box2 h1{
+    color: blue;
+}
+.overall-input-box{
+    width:90%;
+    padding: 10px;
+    min-height: 70vh;
+    /* background-color: lightblue; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.input-box{
+    width:55%;
+    min-height: 70vh;
+    /* background-color: lightslategray; */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+.cont-info{
+    width:40%;
+    min-height: 70vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap:20px;
+}
+.overall-input div > input, select{
+    width:100%;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid lightgray;
+    background-color: white;
+    display: block;
+}
+.overall-input{
+    width: 90%;
+    display: flex;
+    justify-content:center;
+    gap:20px;
+    align-items: center;
+    
+}
+.overall-input div{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    width:100%;
+
+}
+.overall-input div > label{
+    padding:10px;
+    font-size: 18px;
+    color: grey;
+}
+.overall-input div > input::placeholder{
+    color: lightgray;
+    font-size: 18px;
+}
+.overall-input div > select{
+    color: lightgray;
+    font-size:18px
+}
+.cont-info img{
+    width:90%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.cont-info p > b{
+    font-size: 20px;
+    color: black;
+}
+.cont-info p{
+    font-size: 17px;
+    color: grey;
+    display: flex;
+    flex-direction: column;
+
+}
+.input-box .btn001{
+    width:100px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: 18px;
+    background-color: navy;
+    margin: 10px;
+
+}
+@media only screen and (min-width: 1000px) and (max-width: 1100px) {
+    .overall-input-box{
+        width:100%;
+        min-height: 100vh;
+        justify-content: center;
+
+    }
+}
+@media only screen and (min-width: 900px) and (max-width: 1000px) {
+    .overall-input-box{
+        width:100%;
+        min-height: 100vh;
+        justify-content: center;
+    }
+}
+@media only screen and (min-width: 800px) and (max-width: 900px) {
+    .overall-input-box{
+        width:100%;
+        min-height: 100vh;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .input-box{
+        width:97%;
+         align-items: center;
+    }
+    .cont-info{
+        width:78%;
+    }
+}
+@media only screen and (min-width: 700px) and (max-width: 800px) {
+    .overall-input-box{
+        width:100%;
+        min-height: 100vh;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .input-box{
+        width:97%;
+         align-items: center;
+    }
+    .cont-info{
+        width:78%;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 700px) {
+    .overall-input-box{
+        width:100%;
+        min-height: 100vh;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .input-box{
+        width:97%;
+         align-items: center;
+    }
+    .cont-info{
+        width:78%;
+    }
+    .overall-input{
+        flex-direction: column;
+    }
+
+}
+@media only screen and (min-width: 500px) and (max-width: 600px) {
+    .overall-input-box{
+        width:100%;
+        min-height: 100vh;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .input-box{
+        width:97%;
+         align-items: center;
+    }
+    .cont-info{
+        width:90%;
+    }
+    .overall-input{
+        flex-direction: column;
+    }
+
+}
+@media only screen and (min-width: 400px) and (max-width: 500px) {
+    .overall-input-box{
+        width:100%;
+        min-height: 100vh;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .input-box{
+        width:97%;
+         align-items: center;
+    }
+    .cont-info{
+        width:90%;
+    }
+    .overall-input{
+        flex-direction: column;
+    }
+    .overall-input div > input::placeholder{
+    color: lightgray;
+    font-size: 15px;
+}
+
+}
+@media only screen and (min-width: 300px) and (max-width: 400px) {
+    .overall-input-box{
+        width:100%;
+        min-height: 100vh;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .input-box{
+        width:100%;
+         align-items: center;
+         padding: 0px;
+    }
+    .cont-info{
+        width:97%;
+        padding: 0px;
+    }
+    .overall-input{
+        flex-direction: column;
+    }
+    .overall-input div > input::placeholder{
+    color: lightgray;
+    font-size: 15px;
+}
+.cont-info img{
+    width:100%;
+    height: 215px;
+}
+
+}
+.box8{
+    min-height: 50vh;
+    background-color:cornflowerblue;
+    color: white;
+}
+.overall-footer{
+    width:100%;
+    min-height: 40vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.footer-1{
+    min-width:300px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap:35px;
+    flex-direction: column;
+}
+.footer-1 h1{
+    width:70px;
+    height: 70px;
+    font-size: 15px;
+    border-radius: 50%;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-2{
+    min-width:500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap:20px;
+    font-size: 18px;
+
+}
+.quick-footer{
+    min-width:45%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap:15px;
+    flex-direction: column;
+}
+.quick-footer p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+@media only screen and (min-width:700px) and (max-width:800px) {
+    .overall-footer{
+        justify-content: start;
+        padding:20px;
+    }
+    .footer-2{
+        min-width:380px;
+    }
+}
+@media only screen and (min-width:600px) and (max-width:700px) {
+    .overall-footer{
+        justify-content: start;
+        padding:20px;
+        gap:20px;
+    }
+    .footer-2{
+        min-width:380px;
+    }
+}
+@media only screen and (min-width:500px) and (max-width:600px) {
+    .overall-footer{
+        justify-content: start;
+        padding:20px;
+        gap:20px;
+    }
+    .footer-2{
+        min-width:380px;
+    }
+}
+@media only screen and (min-width:400px) and (max-width:500px) {
+    .overall-footer{
+        justify-content: start;
+        padding:20px;
+        gap:20px;
+    }
+    .footer-2{
+        min-width:336px;
+    }
+}
+@media only screen and (min-width:300px) and (max-width:400px) {
+    .overall-footer{
+        justify-content: start;
+        padding:20px;
+        gap:20px;
+    }
+    .footer-2{
+        min-width:240px;
+        font-size: 13px;
+        gap:0px;
+    }
+    .footer-1{
+        min-width: 290px;
+    }
+}
+.footer-1 p:hover{
+    color: navy;
+}
+.footer-2 p:hover{
+    color: navy;
+}
